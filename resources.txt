@@ -1,0 +1,4 @@
+https://github.com/twisprite-developers/unity-nfc-plugin
+https://github.com/jderrough/UnitySlippyMap
+http://stackoverflow.com/questions/16762575/displaying-google-maps-in-unity-on-mobile-devices
+https://console.developers.google.com/apis/credentials?project=nettersheimtour
