@@ -1,4 +1,12 @@
 https://github.com/twisprite-developers/unity-nfc-plugin
+
+https://developers.google.com/vr/unity/download#google-vr-sdk-for-unity
+https://github.com/googlevr/gvr-unity-sdk
+http://bernatferragut.co/2016-11-15/VR-Google-Cardboard-Basic-Scene-Setup/
+
+http://bernieroehl.com/360stereoinunity/
+https://www.youtube.com/watch?v=_YTVsLnK-XU
+
 https://github.com/jderrough/UnitySlippyMap
 http://stackoverflow.com/questions/16762575/displaying-google-maps-in-unity-on-mobile-devices
 https://console.developers.google.com/apis/credentials?project=nettersheimtour

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class TourManager : MonoBehaviour {
 
@@ -29,7 +30,9 @@ public class TourManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (qrString == "tag1") {
+			SceneManager.LoadScene ("location1");
+		}
 	}
 
 
