@@ -1,5 +1,7 @@
 https://github.com/twisprite-developers/unity-nfc-plugin
 
+http://blogs.oregonstate.edu/anima/2016/08/02/unity3d-5-x-make-quick-scrolling-text-field/
+
 https://developers.google.com/vr/unity/download#google-vr-sdk-for-unity
 https://github.com/googlevr/gvr-unity-sdk
 http://bernatferragut.co/2016-11-15/VR-Google-Cardboard-Basic-Scene-Setup/
