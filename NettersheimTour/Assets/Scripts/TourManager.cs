@@ -9,7 +9,7 @@ public class TourManager : MonoBehaviour {
 
 	public GameObject startPopup;
 	public GameObject stationPopup;
-	public GameObject stationPopupCancelButton;
+//	public GameObject stationPopupCancelButton;
 	public GameObject stationPopupStartButton;
 
 	[SerializeField] private Text testLabelText;
@@ -54,19 +54,19 @@ public class TourManager : MonoBehaviour {
 			stationPopupText.text = "Kein Info-Text gefunden.";
 		}
 		stationPopup.SetActive (true);
-		stationPopupCancelButton.SetActive (true);
-		stationPopupCancelButton.GetComponent<Button> ().interactable = true;
+//		stationPopupCancelButton.SetActive (true);
+//		stationPopupCancelButton.GetComponent<Button> ().interactable = true;
 		stationPopupStartButton.SetActive (true);
 		stationPopupStartButton.GetComponent<Button> ().interactable = true;
 	}
 
-	public void hidePopup() {
-		stationPopup.SetActive (false);
-		stationPopupCancelButton.SetActive (false);
-		stationPopupCancelButton.GetComponent<Button> ().interactable = false;
-		stationPopupStartButton.SetActive (false);
-		stationPopupStartButton.GetComponent<Button> ().interactable = false;
-	}
+//	public void hidePopup() {
+//		stationPopup.SetActive (false);
+//		stationPopupCancelButton.SetActive (false);
+//		stationPopupCancelButton.GetComponent<Button> ().interactable = false;
+//		stationPopupStartButton.SetActive (false);
+//		stationPopupStartButton.GetComponent<Button> ().interactable = false;
+//	}
 
 //	void OnLevelWasLoaded(int level) {
 //		startPopup = GameObject.Find ("startPopup");
