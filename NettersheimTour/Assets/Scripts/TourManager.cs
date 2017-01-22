@@ -7,9 +7,9 @@ public class TourManager : MonoBehaviour {
 
 //	public static TourManager instance = null;
 
-	public GameObject stationPopup;
+//	public GameObject stationPopup;
 //	public GameObject stationPopupCancelButton;
-	public GameObject stationPopupStartButton;
+//	public GameObject stationPopupStartButton;
 
 	public GameObject[] popups;
 	public GameObject[] archMarker;
@@ -51,31 +51,38 @@ public class TourManager : MonoBehaviour {
 			GameManager.instance.progress++;
 		}
 		if (qrString == "kakus") {
-			nextScene = "location1";
-			GameManager.instance.progress++;
+			nextScene = "location2";
 			showPopup (5);
+			GameManager.instance.progress++;
 		}
 		if (qrString == "hausFoss") {
-			nextScene = "location1";
-			GameManager.instance.progress++;
+			nextScene = "location3";
 			showPopup (7);
+			GameManager.instance.progress++;
 		}
 		if (qrString == "korallen") {
-			nextScene = "location1";
-			GameManager.instance.progress++;
+			nextScene = "location4";
 			showPopup (9);
+			GameManager.instance.progress++;
 		}
 		if (qrString == "ziel") {
 			//			nextScene = "location1";
-			if (GameManager.instance.progress>=4)
-				showPopup (13);
-			else showPopup (11);
+			showPopup (13);
+//			if (GameManager.instance.progress>=4)
+//				showPopup (13);
+//			else showPopup (11);
 		}
 	}
 
 	void showPopup(int id) {
 		popups [id].SetActive (true);
 		popups [id+1].SetActive (true);
+	}
+
+	public void hidePopup() {
+		for (int i = 0; i < popups.Length; i++) {
+			popups [i].SetActive (false);
+		}
 	}
 
 //	void showPopup() {
