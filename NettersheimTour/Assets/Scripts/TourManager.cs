@@ -13,6 +13,8 @@ public class TourManager : MonoBehaviour {
 	public GameObject stationPopupStartButton;
 
 	public GameObject[] popups;
+	public GameObject[] archMarker;
+	public GameObject[] geoMarker;
 
 	[SerializeField] private Text testLabelText;
 	[SerializeField] private Text stationPopupText;
@@ -79,6 +81,28 @@ public class TourManager : MonoBehaviour {
 //		testLabelText = GameObject.Find ("testLabel").GetComponent<Text> ();
 //		stationPopupText = GameObject.Find ("stationPopupText").GetComponent<Text> ();
 //	}
+
+	public void toggleOptionPanel() {
+		popups[0].SetActive(!popups[0].activeSelf);
+	}
+
+	public void toggleArchMarkers() {
+//		Debug.Log ("toggle:");
+		for (int i = 0; i < archMarker.Length; i++) {
+//			Debug.Log (archMarker[i].activeSelf);
+			archMarker[i].SetActive (!archMarker[i].activeSelf);
+//			Debug.Log (archMarker[i].activeSelf);
+		}
+	}
+
+	public void toggleGeoMarkers() {
+//		Debug.Log ("toggle:");
+		for (int i = 0; i < geoMarker.Length; i++) {
+//			Debug.Log (geoMarker[i].activeSelf);
+			geoMarker[i].SetActive (!geoMarker[i].activeSelf);
+//			Debug.Log (geoMarker[i].activeSelf);
+		}
+	}
 
 	public void loadLevel() {
 		SceneManager.LoadScene (nextScene);
