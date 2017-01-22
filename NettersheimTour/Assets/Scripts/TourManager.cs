@@ -42,7 +42,7 @@ public class TourManager : MonoBehaviour {
 		//			SceneManager.LoadScene ("location1");
 		//		}
 		if (qrString == "start") {
-//			nextScene = "location1";
+			nextScene = "mainScreen";
 			showPopup (1);
 		}
 		if (qrString == "eisen") {
@@ -66,7 +66,7 @@ public class TourManager : MonoBehaviour {
 			GameManager.instance.progress++;
 		}
 		if (qrString == "ziel") {
-			//			nextScene = "location1";
+			nextScene = "mainScreen";
 			showPopup (13);
 //			if (GameManager.instance.progress>=4)
 //				showPopup (13);
