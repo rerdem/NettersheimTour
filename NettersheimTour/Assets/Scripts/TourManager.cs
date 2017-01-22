@@ -7,7 +7,6 @@ public class TourManager : MonoBehaviour {
 
 //	public static TourManager instance = null;
 
-	public GameObject startPopup;
 	public GameObject stationPopup;
 //	public GameObject stationPopupCancelButton;
 	public GameObject stationPopupStartButton;
@@ -31,8 +30,6 @@ public class TourManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		startPopup.SetActive(true);
-
 		AndroidNFCReader.enableBackgroundScan ();
 		AndroidNFCReader.ScanNFC (gameObject.name, "OnFinishScan");
 
@@ -44,25 +41,56 @@ public class TourManager : MonoBehaviour {
 		//		if (qrString == "tag1") {
 		//			SceneManager.LoadScene ("location1");
 		//		}
-		if (qrString == "tag1") {
+		if (qrString == "start") {
+//			nextScene = "location1";
+			showPopup (1);
+		}
+		if (qrString == "eisen") {
 			nextScene = "location1";
-			showPopup ();
+			showPopup (3);
+			GameManager.instance.progress++;
+		}
+		if (qrString == "kakus") {
+			nextScene = "location1";
+			GameManager.instance.progress++;
+			showPopup (5);
+		}
+		if (qrString == "hausFoss") {
+			nextScene = "location1";
+			GameManager.instance.progress++;
+			showPopup (7);
+		}
+		if (qrString == "korallen") {
+			nextScene = "location1";
+			GameManager.instance.progress++;
+			showPopup (9);
+		}
+		if (qrString == "ziel") {
+			//			nextScene = "location1";
+			if (GameManager.instance.progress>=4)
+				showPopup (13);
+			else showPopup (11);
 		}
 	}
 
-	void showPopup() {
-		if (nextScene == "location1") {
-			stationPopupText.text = "Dies ist der Info-Text zu Station 1";
-		}
-		else {
-			stationPopupText.text = "Kein Info-Text gefunden.";
-		}
-		stationPopup.SetActive (true);
-//		stationPopupCancelButton.SetActive (true);
-//		stationPopupCancelButton.GetComponent<Button> ().interactable = true;
-		stationPopupStartButton.SetActive (true);
-		stationPopupStartButton.GetComponent<Button> ().interactable = true;
+	void showPopup(int id) {
+		popups [id].SetActive (true);
+		popups [id+1].SetActive (true);
 	}
+
+//	void showPopup() {
+//		if (nextScene == "location1") {
+//			stationPopupText.text = "Dies ist der Info-Text zu Station 1";
+//		}
+//		else {
+//			stationPopupText.text = "Kein Info-Text gefunden.";
+//		}
+//		stationPopup.SetActive (true);
+////		stationPopupCancelButton.SetActive (true);
+////		stationPopupCancelButton.GetComponent<Button> ().interactable = true;
+//		stationPopupStartButton.SetActive (true);
+//		stationPopupStartButton.GetComponent<Button> ().interactable = true;
+//	}
 
 //	public void hidePopup() {
 //		stationPopup.SetActive (false);
