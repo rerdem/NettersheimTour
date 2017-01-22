@@ -12,3 +12,9 @@ https://www.youtube.com/watch?v=_YTVsLnK-XU
 https://github.com/jderrough/UnitySlippyMap
 http://stackoverflow.com/questions/16762575/displaying-google-maps-in-unity-on-mobile-devices
 https://console.developers.google.com/apis/credentials?project=nettersheimtour
+
+
+
+Quellen (frei):
+https://pixabay.com/en/bones-dog-chicken-comic-307870/
+https://pixabay.com/en/rock-3d-render-rendering-computer-891886/

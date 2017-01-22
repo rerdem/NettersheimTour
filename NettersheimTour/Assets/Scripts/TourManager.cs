@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class TourManager : MonoBehaviour {
 
-	public static TourManager instance = null;
+//	public static TourManager instance = null;
 
 	public GameObject startPopup;
 	public GameObject stationPopup;
 //	public GameObject stationPopupCancelButton;
 	public GameObject stationPopupStartButton;
+
+	public GameObject[] popups;
 
 	[SerializeField] private Text testLabelText;
 	[SerializeField] private Text stationPopupText;
@@ -19,11 +21,11 @@ public class TourManager : MonoBehaviour {
 
 	private string nextScene;
 
-	void Awake () {
-		if (instance == null) instance = this;
-		else if (instance != null) Destroy(gameObject);
+//	void Awake () {
+//		if (instance == null) instance = this;
+//		else if (instance != null) Destroy(gameObject);
 //		DontDestroyOnLoad(gameObject);
-	}
+//	}
 
 	// Use this for initialization
 	void Start () {
