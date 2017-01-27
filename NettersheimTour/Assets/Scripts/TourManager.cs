@@ -43,31 +43,31 @@ public class TourManager : MonoBehaviour {
 		//		}
 		if (qrString == "start") {
 			nextScene = "mainScreen";
-			showPopup (1);
+			showPopup (2);
 		}
 		if (qrString == "eisen") {
 			nextScene = "location1";
-			showPopup (3);
+			showPopup (4);
 			GameManager.instance.progress++;
 		}
 		if (qrString == "kakus") {
 			nextScene = "location2";
-			showPopup (5);
+			showPopup (6);
 			GameManager.instance.progress++;
 		}
 		if (qrString == "hausFoss") {
 			nextScene = "location3";
-			showPopup (7);
+			showPopup (8);
 			GameManager.instance.progress++;
 		}
 		if (qrString == "korallen") {
 			nextScene = "location4";
-			showPopup (9);
+			showPopup (10);
 			GameManager.instance.progress++;
 		}
 		if (qrString == "ziel") {
 			nextScene = "mainScreen";
-			showPopup (13);
+			showPopup (14);
 //			if (GameManager.instance.progress>=4)
 //				showPopup (13);
 //			else showPopup (11);
@@ -119,6 +119,10 @@ public class TourManager : MonoBehaviour {
 
 	public void toggleOptionPanel() {
 		popups[0].SetActive(!popups[0].activeSelf);
+	}
+
+	public void toggleListPanel() {
+		popups[1].SetActive(!popups[1].activeSelf);
 	}
 
 	public void toggleArchMarkers() {
